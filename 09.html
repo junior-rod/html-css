@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <title>Listas com HTML5</title>
+</head>
+<body>
+    <h1>Listas com HTML5</h1>
+    <h2>Listas Ordenadas</h2>
+    <p>A HTML chama de <strong>ordered lists</strong> todas aquelas listas onde a ordem é algo <mark>muito importante.</mark></p>
+    <p>Para criar uma lista ordenada, usa-se a tag &lt;ol&gt; para delimitar a lista e &lt;li&gt;(list item) para identificar cada item da lista.</p>
+    <p>Código:
+        <pre>
+    &lt;ol&gt;
+    &lt;li&gt;hehe&lt;/li&gt;
+    &lt;li&gt;haha&lt;/li&gt;
+    &lt;li&gt;hoho&lt;/li&gt;
+    &lt;/ol&gt;
+        </pre>
+    </p>
+    <p>Resultado:</p>
+    <ol>
+        <li>hehe</li>
+        <li>haha</li>
+        <li>hoho</li>
+    </ol>
+    <p>A tag ol pode possuir parâmetro <em>type</em> <strong>&lt;ol type=""&gt;&lt;/ol&gt;</strong>, onde é possível configurar o tipo de marcador da lista atual. Sendo o:</p>
+    <ul>
+        <li>1 - Padrão. Listas enumeradas (1,2,3...)</li>
+        <li>A - Listas alfabéticas maiúsculas (A,B,C...)</li>
+        <li>a - Listas alfabéticas minúsculas (a,b,c...)</li>
+        <li>I - Listas com algarismos romanos maiúsculos</li>
+        <li>i - Lista com algarismos romanos minúsculos.</li>
+    </ul>
+    <p>Também é possível indicar o início da contagem usando o parâmetro start, exemplo: <strong>&lt;ol type="I" start="5"&gt;&lt;/ol&gt;</strong> vai gerar números romanos a partir de V.</p>
+    <ol type="I" start="5">
+        <li>hehe</li>
+        <li>haha</li>
+        <li>hoho</li>
+    </ol>
+    <h2>Listas não Ordenadas</h2>
+    <p>A HTML chama de <strong>unordered lists</strong> todas aquelas listas onde a ordem <mark>NÃO</mark> é algo muito importante.</p>
+    <p>Para criar uma unordered list, usa-se a tag &lt;ul&gt; para delimitar a lista e &lt;li&gt;(list item) para identificar cada item da lista.</p>
+    <p>O marcador padrão é a bolinha preenchida preta, mas existe a opção de configurar a propriedade <em>type</em> da tag &lt;ul type=""&gt; com os seguintes valores:</p>
+    <ul>
+        <li>disc - Padrão. Bola preta toda pintada.</li>
+        <li>circle - Bola com bordas pretas sem preenchimento</li>
+        <li>square - Quadrado preto todo pintado</li>
+    </ul>
+    <h2>Lista de definição</h2>
+    <p>É como se fosse um dicionário, temos os termos e as suas descrições.</p>
+    <p>Toda lista de definições está dentro de uma tag <strong>&lt;dl&gt;&lt;/dl&gt;</strong> (definition list). Cada termo é uma <strong>&lt;dt&gt;</strong> (definition term) e cada descrição é um <strong>&lt;dd&gt;</strong> (definition description). Entendeu? Pq eu não, mas segue o exemplo:</p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação utilizada para criar o conteúdo de sites.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a especificação de estilos em sites.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para criar interatividades em sites.</dd>
+    </dl>
+    <p> O que mais importa é o significado desse tipo de listagem, pois ele relaciona diretamente os pares Termo + Descrição e isso ajuda bastante com mecanismos de busca.</p>
+</body>
+</html>

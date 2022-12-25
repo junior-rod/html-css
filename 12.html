@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: gray;
+            color: white;
+        }
+        h1{
+            color: green;
+        }
+        div{
+            color:coral
+        }
+    </style>
+    <title>Trabalhando com estilos</title>
+</head>
+<body>
+    <h1>Trabalhando com estilos (CSS)</h1>
+    <h2>CSS inline style</h2>
+    <p>Em ordem de prioridade que o código fará, esse método sera o prioritário, ou seja, ele sempre levará esse em consideração. Para utilizar CSS inline basta adicionar o parâmetro style dentro da tag, por exemplo:</p>
+    <p>&lt;body <strong>style="font-family: Arial, Helvetica, sans-serif; color: blue;"</strong>&gt;</p>
+    <p>Isso fará com que todo o body fique com uma fonte sem serifa e com as letras azuis.</p>
+    <h2>CSS internal style</h2>
+    <p>Para aplicar estilos de forma mais dinâmica e prática, adicione uma tag &lt;style&gt; dentro da área &lt;head&gt;</p>
+    <p>Seu código deve ficar mais ou menos assim:
+        <code>
+            <pre>
+                &lt;html&gt;
+                &lt;head&gt;
+                ...
+                &lt;style&gt;
+                    <div>
+                        body{
+                            font-family: Arial, Helvetica, sans-serif;
+                            background-color: gray;
+                            color: white;
+                        }
+                        h1{
+                            color: green;
+                        }
+                    </div>
+                &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </pre>
+        </code>
+    </p>
+    <h2>CSS external style</h2>
+    <p>utilizamos a tag &lt;link&gt; especialmente configurada para trabalhar com arquivos externos de estilo. Essa tag deve ser colocada dentro da área &lt;head&gt;. Basta digitar 'link' no head e escolher a opção <strong>link:css</strong>.</p>
+    <p>Após isso, segure a tecla ctrl e clique no nome do documento, dessa forma o VS Code vai criar o arquivo .css para você.</p>
+    <p><strong>ATENÇÃO!</strong> Ao acessar o arquivo .css a primeira coisa que deve ser feita é adicionar <strong>@charset "UTF-8";</strong> para evitar problemas com acentuação.</p>
+    <p>Para utilizar essa mesma configuração montada dentro do arquivo .css em outras páginas, basta adicionar o link no head e escolher o mesmo nome de arquivo que você escolheu antes (É OBVIO QUE O ARQUIVO .CSS PRECISA TÁ DENTRO DA MESMA PASTA DA PÁGINA).</p>
+</body>
+</html>

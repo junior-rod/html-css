@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <style>
+        img{
+            max-width: 620px;
+            width: 90%;
+        }
+    </style>
+    <title>Imagens e Favicon</title>
+</head>
+<body>
+    <h1>Imagens e Favicon</h1>
+    <h2>Direitos Autorais</h2>
+    <p>Cuidado na hora de escolher imagens. Certifique-se de pegar uma imagem de pessoas que permitem você usá-las, isso porque as imagens possuem direitos autorais e você provavelmente não pode usá-las. </p>
+    <p>A seguir, estão algumas dicas para você não ser processado:</p>
+    <img src="images/06/advogado.jpg" alt="advogado">
+    <ol>
+        <li><b>Seja o criador da própria arte.</b> Use fotos que seu próprio cliente tirou ou que você mesmo criou. </li>
+        <li>Consiga uma <b>autorização legal</b> de quem é o detentor dos direitos autorais. Isso precisa de documentos específicos para tal (Contrato). </li>
+        <li>Compre o direito de usar a imagem. Existem vários sites como o iStockPhoto, <b>DepositPhotos, ShutterStock, etc.</b> Só fica de olho aberto e leia as regras, pois na maioria dos casos essa imagem que você comprou só pode ser usada uma única vez ou em um único projeto. </li>
+        <li>Use <b>imagens de domínio público</b>, pois essas você tem a liberdade de colocar no seu site, seguindo as regras estabelecidas pelo autor. </li>
+    </ol>
+    <h2>Formatos de imagens</h2>
+    <p>Prefira sempre <b>imagens JPEG</b> (compactadas entre 30% e 50%) e só use PNG quando realmente for preciso uma imagem com fundo transparente. O motivo? Geralmente as JPEG pesam menos que as PNG.</p>
+    <h3>Tamanho das imagens</h3>
+    <p>Pare de reduzir imagens com código! (Você fez isso com a imagem aí de cima hihihi) <br> Precisa de uma imagem 200x180? Pesquise ou edite a sua imagem para que ela tenha exatamente esse tamanho, pq o Google <b>PENALIZA</b> sites pesados.</p>
+    <h2>Carregar imagens HTML</h2>
+    <p>Há duas formas de fazer isso, mas todas utilizam a tag <b>&lt;img src=" " alt=" "&gt;</b> onde src significa (source/origem) e alt(alternative/texto alternativo).</p>
+    <p>A primeira forma, é informar o caminho da imagem, que deve estar dentro da mesma pasta do arquivo .html, em src e a segunda forma é adicionar o link da imagem em src, ex:</p>
+    <p><b>&lt;img src="images/06/advogado.jpg" alt="advogado"&gt;</b> (Para autocompletar o caminho com o VS Code, basta apertar ctrl+espaço lá no src.)</p>
+    <p>ou</p>
+    <p><b>&lt;img src="https://cdn.motor1.com/images/mgl/yKJwK/s1/2020-porsche-911-turbo.webp" alt="Porsche 911 Turbo S"&gt;</b></p>
+    <h2>Texto alternativo</h2>
+    <p>Textos alternativos são de suma importância para que seu site seja encontrado em mecanismos de buscas, porque o algoritmo irá saber do que aquela imagem se trata, e também na acessibidade, pois se um visitante for deficiente visual, o navegador irá descrever a imagem para ele.</p>
+    <h2>Favicon</h2>
+    <p>Escreve a palavra "link" no head e escolhe a opção <b>link:favicon</b> dps só procurar o .ico ou .png do ícone.</p>
+</body>
+</html>

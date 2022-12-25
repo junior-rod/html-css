@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url(images/17-2/fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+/*Para criar variáveis basta adicionar a pseudoclasse :root{} antes de tudo e criar a variável com 2 traços antes do nome*/
+:root{
+    --cor0: #c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+*{ /*Configuração global das CSS. Em resumo, o que você colocar aqui dentro vai ser aplicado a tudo, h1, h2, p, a etc.*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+a.externo::after{
+content: '\00A0\1F517'; /*00A0 é o código para o espaço e o outro código é do emoji do link*/
+}
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5) );
+    min-height: 150px;
+    text-align: center;
+    /*padding-top:40px; Solução do Guanabara para distânciar o título da parte superior do navegador*/
+}
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    padding-top: 30px; /*Minha solução para distânciar o título da parte superior do navegador*/
+    font-size: 3em;
+    margin-bottom: 20px;/*Distanciar o título do subtítulo do site*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.411);
+    font-weight: normal;
+}
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    padding-right: 10px;/*Distanciar o subtítulo das bordas do navegador quando a tela estiver pequena*/
+    padding-left: 10px;
+    margin: auto; /*Quando mexe no width, instantaneamente ele vira um bloco, logo é necessário colocar auto na margem para ficar centralizado.*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.411);
+}
+nav{
+    background-color: var(--cor5);
+    padding: 10px; /*Deixa o nav 'mais gordinho'*/
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.438); /*Dá uma sensação de sombra no header sobre o main*/
+}
+nav > a{
+color: white;
+padding: 10px;/*Cria uma separação entre os links*/
+text-decoration: none;/*Tira o sublinhado do link*/
+font-weight: bold;
+}
+nav > a:hover{
+background-color: var(--cor3); /*Cria um retangulo no link quando o mouse estiver em cima dele*/
+color: var(--cor5);
+border-radius: 5px 5px 0px 0px; /*Arredonda o rentangulo criado acima*/
+transition-duration: 0.2s; /*Cria uma animação/transição de fade-in e fade-out quando o mouse entra ou sai do espaço do link*/
+}
+main{
+    background-color: white;
+    min-width: 300px; /*Não vai diminuir mais que isso*/
+    max-width: 1000px; /*Não vai aumentar mais que isso para evitar que fique difícil de ler em telas grandes*/
+    margin: auto; /*Para centralizar o conteúdo na tela*/
+    padding: 20px; /*Para criar uma 'margem' interna entre o conteúdo e a borda do main*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418); /*Sombra no retangulo branco, vulgo main*/
+    margin-bottom: 30px; /*Para distânciar o main do rodapé*/
+    border-radius: 0px 0px 10px 10px; /*Cria uma circuferência na borda apenas na parte inferior do main.*/
+    /*Ordem do border radius: (canto superior esquerdo) (canto superior direito) (canto inferior direito) (canto inferior esquerdo)*/
+}
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+main h2{
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);/*Fazer o efeito do verde para o transparente no h2*/
+    text-indent: 8px;
+    font-weight: normal;
+}
+main p{
+    margin: 15px 0px; /*Cria uma margem de 15 pixels em cima e em baixo e mantém a margem de 0 pixels nas laterais*/
+    text-align: justify; /*Justifica o texto dos parágrafos*/
+    text-indent: 30px; /*Cria um recuo na primeira linha do parágrafo, para ela começar um pouco mais a frente do que as demais*/
+    line-height: 2em;/*Espaçamento entre as linhas do parágrafo*/
+}
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+}
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px; /*Adiciona um espaçamento do retangulo de 2px na parte superior e inferior e 6px nas laterais*/
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4);
+}
+main img{
+    width: 100%; /*Faz com que as imagens ocupem 100% da largura do main*/
+}
+main img#pequena{ /*id criado para diminuir e centralizar a imagem do android e um boneco de banheiro dando as mãos*/
+    max-width: 350px; /*Não deixa a imagem ultrapassar o tamanho dela para não ficar embaçada*/
+    display: block; /*display block e margin auto funcionam juntos para deixar a imagem centralizada na tela*/
+    margin: auto;
+}
+div.video{
+    background-color: var(--cor5);
+    margin-bottom: 30px;
+    margin: 0px -20px 30px -20px; /*Para colar o retangulo verde no main*/
+    padding: 20px;
+    padding-bottom: 56.5%; /*Corrigir o bug da parte 1 e 2*/
+    position: relative; /*Parte 1/2 Truque para tornar o vídeo responsivo*/
+}
+div.video > iframe{
+position: absolute; /*Parte 2/2 Truque para tornar o vídeo responsivo*/
+top: 5%;
+left: 5%; /*Top e Left são editáveis quando você adiciona o posicionamento absoluto. Top é a distância do topo do vídeo para o topo do retangulo verde e o left a distancia da margem esquerda do vídeo pra margem esquerda do retagulo*/
+width: 90%;
+height: 90%;
+}
+aside{
+    background-color: var(--cor1);
+    padding: 10px; /*Descola o retangulo verde da borda do main (retangulo branco)*/
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.418);
+}
+aside h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /*Os valores negativos farão a margem crescer para fora*/
+    border-radius: 10px 10px 0px 0px; /*Arredonda a parte superior do retangulo do h3*/
+}
+aside ul{
+list-style-type: '\2714'; /*Troca a bolinha da lista não ordenada por qualquer coisa que estiver dentro da aspas simples. É possível colocar qualquer EMOJI, basta ir até a emojipedia, procurar o Codepoins, apagar o +U e trocar por uma barra invertida \.*/
+list-style-position: inside; /*Coloca as bolinhas da lista não ordenada para dentro do retangulo verde(aside). O normal é que elas fiquem para fora.*/
+columns: 2; /*Define a quantidade de colunas que a lista terá*/
+}
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}

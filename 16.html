@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 15px;
+        }
+        #exemplo {
+            width: 300px;
+            height: 50px;
+            background-color: lightgreen;
+            border-width: 10px;
+            border-style: outset;
+            border-color: purple;
+            padding: 20px;
+            outline-width: 20px;
+            outline-style: solid;
+            outline-color: blue;
+            margin: 50px;
+        }
+        mark {
+            color: red;
+        }
+        #sombra{
+            color: white;
+            background-color: purple;
+            width: 400;
+            margin: auto;
+            padding: 1px 10px;
+            box-shadow: 3px 5px 4px black;
+            text-align: center;
+        }
+    </style>
+    <title>Modelo de Caixas</title>
+</head>
+
+<body>
+    <h1>Caixas</h1>
+    <h2>O que é uma caixa em desenvolvimento web?</h2>
+    <p>De forma simples e objetiva, baseado em um conceito chamado
+        “box model”, a grande maioria dos elementos HTML que
+        temos no nosso site são como caixas. Elas são containers
+        que armazenam conteúdos ou até mesmo outras caixas.</p>
+    <h3>Anatomia de uma caixa</h3>
+    <img src="images/16/caixa.png" alt="">
+    <p><strong>Content(conteúdo)</strong> - É o blablabla, ou seja <ins><em>é o que está dentro da caixa</em></ins>,
+        como se fosse o que ela está guardando.</p>
+    <p><strong>Width(largura) e Height(altura)</strong> - É a largura e a altura do conteúdo da caixa. A esse conjunto
+        de propriedades, dá-se o nome de <strong>box-size(tamanho da caixa)</strong>. OBS: O tamanho da caixa NÃO inclui
+        as medidas padding, border, outline e margin.</p>
+    <p><strong>Border(borda)</strong> - Fica ao redor do conteúdo da caixa, como é possível observar na na anatomia
+        acima. A borda pode ter uma espessura, cor e formato.</p>
+    <p><strong>Padding(preenchimento)</strong> - Fica da borda pra dentro, ou seja, fica entre a borda e o conteúdo.</p>
+    <p><strong>Margin(margem)</strong> - Fica da borda para fora.</p>
+    <p><strong>Outline(contorno)</strong> - Fica entre a margem e a borda. O outline é pouco utilizado, mas ele existe.
+        Ele é um traçado visual que podemos criar fora da borda e o <strong>cálculo da sua espessura faz <mark>parte da
+                margem</mark> estabelecida.</strong></p>
+    <p>Se liga nesse exemplo: Eu vou criar uma caixa com as determinadas alterações:
+    <ul>
+        <li>width:300px; Largura da caixa</li>
+        <li>height: 50px; Altura da caixa</li>
+        <li>background-color: lightgreen; Cor de fundo da caixa</li>
+        <li>border-width: 10px; Largura da borda</li>
+        <li>border-style: outset; Estilo da borda </li>
+        <li>border-color: purple; Cor da borda</li>
+        <li>padding: 20px; Distância do conteúdo para a borda</li>
+        <li>outline-width: 20px; Tamanho da borda externa(?)</li>
+        <li>outline-style: solid; Estilo da borda externa</li>
+        <li>outline-color: blue; Cor da borda externa</li>
+        <li>margin: 50px; Margem da lateral da página,do que está acima e abaixo. <strong>Dica: Coloque 'auto' se deseja
+                a caixa centralizada na janela.</strong></li>
+    </ul>
+    <p id="exemplo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maiores debitis rerum, alias
+        voluptatum vitae facilis neque reiciendis quisquam repellat provident! Reprehenderit perferendis rerum tempore
+        repellendus eveniet recusandae enim unde.</p>
+    <p><strong><MARK>ATENÇÃO!</MARK></strong> É possível perceber que o texto não ficou todo dentro da caixa, isso
+        aconteceu porque o texto é muito grande para o tamanho da largura e altura da caixa</p>
+    <h4>Simplificações</h4>
+    <p>É possível simplificar a border(borda) e outline(contorno). A ordem sempre será: width style color. Exemplo: <br>
+        <strong>border: 10px outset purple</strong> <br>
+        <strong>outline: 20px solid blue</strong>
+    </p>
+    <p>Toda caixa possui quatro valores para padding e quatro para margin, sempre nessa mesma ordem: top right bottom
+        left, vulgo em sentido horário. Quando é determinado apenas um valor, esse valor é aplicado para os quatros
+        lados. Quando é determinado dois valores, o primeiro será aplicado para o top e para o bottom e o segundo para
+        left e right. Exemplo:</p>
+    <p><strong>padding: 10px 15px 20px 25px</strong><br>
+        <strong>margin: 0px 10px 20px 30px</strong>
+    </p>
+    <p><strong>
+            <mark>ATENÇÃO!</mark></strong> Perceba que TODO shorthand as coisas são separadas por espaço e NUNCA por
+        vírgulas.</p>
+    <h3>Tipos de caixa</h3>
+    <h4>Block-level</h4>
+    <p>Um elemento dito block-level <strong> sempre vai se iniciar em uma nova linha e vai ocupar a largura total do
+            elemento onde ele está contido.</strong> Se não estiver contido em nenhuma outra caixa, ele vai ocupar 100%
+        da largura do &lt;body&gt;.</p>
+    <p>Na lista a seguir, alguns elementos HTML que são block-level:</p>
+    <img src="images/16/box.png" alt="">
+    <h4>inline-level</h4>
+    <p>Um elemento do tipo inline-level <strong>NÃO vai começar em uma nova linha, e sim no ponto exato onde foram
+            definidos.</strong> E a largura dele vai ocupar apenas o tamanho relativo ao seu conteúdo.</p>
+    <p>Na lista a seguir, alguns elementos HTML que são inline-level:</p>
+    <img src="images/16/inline.png" alt="">
+    <h3>Agrupando Tags</h3>
+    <p>A linguagem HTML padrão tinha apenas duas tags de agrupamento genérico: a &lt;div&gt;
+        &lt;/div&gt;, um elemento agrupador block-level e a &lt;span&gt; &lt;/span&gt; em inline-level. Porém, na HTML 5 surgiram as tags semânticas de agrupamento, se liga:
+    </p>
+    <img src="images/16/agrupamento.png" alt="">
+    <p>Lembrando que isso NÃO é regra, apenas um norte.</p>
+    <h3>Sombras nas caixas</h3>
+    <p>As sombras são úteis para dar volume, para dar a sensação de que as caixa realmente estão ali., se liga no exemplo:</p>
+    <article id="sombra">
+        <h1>Exemplo de sombra na caixa</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos repudiandae eveniet maiores sit id. Itaque est debitis voluptates quo ipsam eveniet amet eius, assumenda aliquam in non, modi recusandae veniam.</p>
+    </article>
+    <p>O que gerou esse resultado foi a propriedade <strong>box-shadow: 3px 5px 4px black;</strong>, e a ordem correta é:</p>
+    <ol type="I">
+        <li><strong>Deslocamento horizontal</strong> (h-offset): Quanto a sombra será deslocada para a direita (valores negativos deslocam para a esquerda);</li>
+        <li><strong>Deslocamento vertical</strong> (v-offset): Quanto a sombra será deslocada para baixo (valores negativos deslocam para cima);</li>
+        <li><strong>Embaraçamento</strong> (blur): Quanto a sombra vai se espalhar;</li>
+        <li><strong>Cor</strong> (color): Cor da sombra. É possível usar transparência.</li>
+    </ol>
+    <h3>Bordas arredondadas</h3>
+    <p>É possível arredondar os vértices usando uma declaração simples utilizando a proriedade <strong>border-radius: 1px 2px 3px 4px;</strong>. <br> Quando se usa apenas um número, esse valor será aplicado para os 4 lados, quando se usa dois números, eles vão agir em vertices intercalados e comeração pelo lado superior esquerdo.</p>
+</body>
+
+</html>

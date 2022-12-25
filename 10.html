@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <title>Ligações em toda parte</title>
+</head>
+<body>
+    <h1>Ligações em toda parte</h1>
+    <h2>Hyperlink</h2>
+    <p>Para criar um hyperlink, você deve criar âncoras através da tag <strong>&lt;a&gt; &lt;/a&gt;</strong>. Veja o exemplo:</p>
+    <p><strong>&lt;a href="https://www.youtube.com"&gt;Clique aqui para acessar o Youtube.&lt;/a&gt;</strong></p>
+    <h3>Atributos de hyperlinks</h3>
+    <p>O principal atributo dessa tag é o href=" ", que cria uma referência hipertexto e é nela que vai a <em>Uniform Resource Locators</em>(URL). Mas, como você já sabe, é possível adicionar mais de um atributo em uma tag, veja alguns exemplos bastante utilizados:</p>
+    <ul>
+        <li><strong>hreflang="en"</strong> indica o idioma do destino.</li>
+        <li><strong>target=""</strong> controla onde o site destino irá abrir:</li>
+        <ul>
+            <li><strong>target="_self"</strong> abre o link na janela atual (padrão);</li>
+            <li><strong>target="_blank"</strong> abre o link em uma nova guia/aba;</li>
+        </ul>
+        <li><strong>rel=""</strong> indica qual é a natureza do destino:</li>
+        <ul>
+            <li><strong>rel="next"</strong> indica que o link é para a próxima parte do documento atual;</li>
+            <li><strong>rel="prev"</strong> indica que o link é para a parte anterior do documento atual;</li>
+            <li><strong>rel="author"</strong> indica que é um link para o site do autor do artigo atual;</li>
+            <li><strong>rel="external"</strong> indica que é um link para outro site que não faz parte do site atual;</li>
+            <li><strong>rel="nofollow"</strong> indica que é um link para um site não endossado, como um link pago.</li>
+        </ul>
+    </ul>
+    <h3>Downloads</h3>
+    <p>Para fazer download, utiliza-se a tag <strong>&lt;a&gt; &lt;/a&gt;</strong>, porém com algumas alterações.</p>
+    <p><strong>&lt;a href="arquivos/livros/meulivro.pdf" download="meulivro.pdf" type="application/pdf"&gt;Clique aqui para fazer o download do meu livro.&lt;/a&gt;</strong></p>
+    <p>Conheça outros tipos de type <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" rel="external" target="_blank">clicando aqui.</a></p>
+</body>
+</html>

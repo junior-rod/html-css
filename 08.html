@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Formatação de Texto</title>
+</head>
+<body>
+    <h1>Formatação de texto</h1>
+    <h2>Pra começar...</h2>
+    <p>HTML 5 valoriza a semântica e o significado das tags muito mais do que suas formas... Colocar &lt;b&gt; pra deixar as coisas em negrito não é muito certo aqui no HTML 5 não, viu?! Você errou todos os documentos anteriores a esse, mas relexa que a partir de agora você não vai errar mais, se liga:</p>
+    <p>Por exemplo, a tag para sublinhar algo, como um endereço, era &lt;u&gt;, mas a partir do HTML 5, o certo é colocar <strong>&lt;address&gt; &lt;/address&gt;</strong> pq assim, smartphones podem até criar um link para abrir o maps, por exemplo. <strong>S I G N I F I C A D O!</strong></p>
+    <p>Quer que algo fique sublinhado só por ficar? Usa CSS!</p>
+    <h2>Agora a coisa muda</h2>
+    <h3><strong>Negrito</strong></h3>
+    <p>A partir de agora, quando você quiser algo em negrito, utilize a tag <strong>&lt;strong&gt; &lt;/strong&gt;</strong> porque ela significa que o termo possui força dentro da frase.</p>
+    <h3><em>Itálico</em></h3>
+    <p>Para deixar alguma parte do texto em <em>itálico</em>, utilize a tag <strong>&lt;em&gt; &lt;/em&gt;</strong>, que significa emphasis (ênfase), já que a ideia do itálico é dar ênfase a algo.</p>
+    <h3><mark>Marca texto</mark></h3>
+    <p>Para fazer marcas de marca texto em <mark>HTML5</mark>, basta utilizar a tag <strong>&lt;mark&gt; &lt;/mark&gt;</strong>. Essa tag serve para trechos que você deseja dar uma ênfase descomunal.</p>
+    <h3>Big e <small>small</small></h3>
+    <p>A tag &lt;big&gt; &lt;/big&gt; que servia para deixar o texto maior foi de base, mas a tag <strong>&lt;small&gt; &lt;/small&gt;</strong> que serve para deixar o texto pequeno, principalmente em rodapé e legendas de fotos, ainda está viva.</p>
+    <h3><del>Texto taxado</del></h3>
+    <p>Para <del>taxar o texto</del> use a tag <strong>&lt;del&gt; &lt;/del&gt;</strong>. Ela significa que o texto está ali, pode ser lido, mas deve ser desconsiderado pelo leitor. <strong>S I G N I F I C A D O!</strong></p>
+    <h3>Texto inserido (<ins>sublinhado</ins>)</h3>
+    <p>O <ins>texto inserido</ins> significa que o trecho deve ser lido e você <ins>DEVE</ins> prestar atenção nele. Para utilizar o texto inserido, basta usar a tag <strong>&lt;ins&gt; &lt;/ins&gt;</strong></p>
+    <h3>Sobr<sub>es</sub>crito e Sub<sup>scri</sup>to</h3>
+    <p>Para textos sobrescritos (ex: H<sub>2</sub>O) e subscritos (ex: m<sup>2</sup>), basta utilizar a tag <strong>&lt;sub&gt; &lt;/sub&gt;</strong> para textos sobrescritos e <strong>&lt;sup&gt; &lt;/sup&gt;</strong> para subscritos.</p>
+    <h3>Linhas de código</h3>
+    <p>A tag <strong>&lt;code&gt; &lt;/code&gt;</strong> informa ao navegador e aos buscadores que o que está dentro da tag é um código-fonte: <pre>
+        <code>void setup() {
+            size(256, 256);
+            int perimetro, area;
+            for (int base =1; base<10; base++) {
+              println("Base: ", base);
+              int altura = 10-base;
+              println("Altura: ", altura);
+              perimetro = calculaPerimetro(base, altura);
+              println("Perimetro: ", perimetro);
+              area = calculaArea (base, altura);
+              println("Area: ", area);
+              println("");
+            }
+          }</code>
+    </pre></p>
+    <h3>Citações</h3>
+    <p>Para criar uma citação em HTML, a primeira forma é utilizar a tag <strong>&lt;q&gt; &lt;/q&gt;</strong> (quote). O texto que estiver entre essa tag vai receber automaticamente as aspas, mas não terá deslocamento, ideal para citações no meio do parágrafo.</p>
+    <p>Para citações que tenham um parágrafo só pra si, usa-se a tag <strong>&lt;blockquote&gt; &lt;/blockquote&gt;</strong>. O texto ganha um recuo automático e pode usar o parâmetro cite dentro da tag para adicionar o link do local de onde foi retirado.</p>
+    <blockquote cite="https://medium.com/o-novo-mercado/porque-a-indústria-do-empreendedorismo-de-palco-irá-destruir-você-3e18309ab47f">
+        O empreendedorismo é a nova religião do homem moderno. Materialista e secular, ele substituiu os Santos do seu altar por fotografias de homens bem sucedidos; os seus Evangelhos são livros como “O sonho grande” e “A força do Hábito”. Ele acredita, de alguma maneira, que tudo aquilo irá aproximá-lo do seu objetivo principal: sucesso, fama e dinheiro…de preferência agora!
+    </blockquote>
+    <h3>Abreviações</h3>
+    <p>Sempre que escrever uma sigla e quiser deixar claro para o leitor e para os mecanismos de busca, use a tag <strong>&lt;abbr title=""&gt; &lt;/abbr&gt;</strong>, assim quando o mouse for passado por cima da abreviação, aparecerá o significado dela. Ex: <abbr title="Hyper Text Markup Language">HTML</abbr></p>
+    <p><strong>&lt;abbr title="Hyper Text Markup Language"&gt;HTML&lt;/abbr&gt;</strong></p>
+    <h3><bdo dir="rtl">Texto Invertido</bdo></h3>
+    <p>Bastante inútil, mas para inverter a escrita das palavras use a tag <strong>&lt;bdo dir="rtl"&gt; &lt;/bdo&gt;</strong>. bdo significa bi-directional override e o dir rtl significa a direção (right to left)</p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <title>Seletores personalizados</title>
+</head>
+<body>
+    <h1>Seletores personalizados em CSS</h1>
+    <p>Para começar a dar mais poder às CSS, criando estilos
+        personalizados, precisamos aprender a utilizar os seletores de <strong>id(#)</strong> e de <strong>class(.)</strong> de maneira eficiente. Ao criar nosso conteúdo em HTML, podemos identificar um determinado elemento único com um id, ou agrupar elementos múltiplos que tenham características semelhantes com um class.</p>
+    <p><strong>Lembre-se:</strong> id só pode ser usado em um elemento <strong>ÚNICO</strong> e a class pode ser usada em <strong>MAIS</strong> de um elemento.</p>
+    <h2>id(#)</h2>
+    <h3>id na HTML</h3>
+    <p>Para identificar uma tag com id em HTML, basta adicionar id="nomedoid" antes de fechar a tag, exemplo: &lt;h1 id="titulo"&gt;...&lt;/h1&gt;</p>
+    <h3>id nas CSS</h3>
+    <p>Dentro da tag style ou dentro do arquivo .CSS, você vai personalizar o id colocando uma hashtag e o nome do id, por exemplo: <br>
+    #principal{ <br>
+    ... <br>
+    }</p>
+    <h2>class(.)</h2>
+    <h3>class na HTML</h3>
+    Para identificar uma tag com class em HTML, basta adicionar class="nomedaclass" antes de fechar a tag, exemplo: &lt;h1 class="elementos"&gt;...&lt;/h1&gt;</p>
+    <h3>class nas CSS</h3>
+    <p>Dentro da tag style ou dentro do arquivo .CSS, você vai personalizar o id colocando um ponto (.) e o nome da class, por exemplo: <br>
+        .elementos{ <br>
+        ... <br>
+        }</p>
+    <h2>Pseudo-classes e pseudo-elementos</h2>
+    <h3>Pseudo-classes</h3>
+    <p>Uma pseudo-classe CSS é uma palavra-chave adicionada às declarações de um seletor
+        após um sinal de dois pontos e <strong>especificam um estado especial de um elemento.</strong>
+        Existem várias pseudo-classes para estilos, podemos
+        citar :hover, :visited, :active, :checked, :empty e :focus</p>
+        <ul>
+            <li><strong>:hover</strong> - Acontece algo se o mouse estiver em cima do elemento;</li>
+            <li><strong>:visited</strong> - Após visitado(clicado), o que irá acontecer?</li>
+            <li><strong>:active</strong> - Momento exato que o mouse está clicando no elemento;</li>
+            <li><strong>:checked</strong></li>
+            <li><strong>:empty</strong></li>
+            <li><strong>:focus</strong></li>
+        </ul>
+<p>exemplo:</p>
+<img src="images/15/pseudoclasse.png" alt="">
+        <h3>Pseudo-elementos</h3>
+        <p>Já um pseudo-elemento CSS é uma palavra-chave adicionada às declarações de um
+            seletor após dois sinais de dois pontos e <strong>
+                permitem que você formate um pedaço
+                específico do elemento referenciado.
+            </strong> Os principais pseudo-elementos usados nas CSS
+            são ::before, ::after, ::first-letter, ::first-line</p>
+            <ul>
+                <li><strong>::before</strong> - Adiciona algo antes do elemento;</li>
+                <li><strong>::after</strong> - Adiciona algo depois do elemento;</li>
+            </ul>
+            <p>exemplo:</p>
+            <img src="images/15/pseudoelemento.png" alt="">
+</body>
+</html>

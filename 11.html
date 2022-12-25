@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <title>Imagens dinâmicas, áudio e vídeo</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas, áudio e vídeo</h1>
+    <h2>Imagens dinâmicas</h2>
+    <p>A imagem abaixo é uma imagem dinâmica, ou seja, ela muda de acordo com o tamanho da tela. Faz o teste ai!</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="https://s3-ap-southeast-1.amazonaws.com/caarlyd/img/852493-small.jpg" type="image/jpg">
+        <source media="(max-width: 1050px)" srcset="https://image.webmotors.com.br/_fotos/AnuncioUsados/gigante/2022/202212/20221213/PORSCHE-911-3.0-24V-H6-GASOLINA-CARRERA-S-PDK-wmimagem10574610916.jpg" type="image/jpg">
+        <img src="https://s3.ecompletocarros.dev/images/lojas/285/veiculos/96549/veiculoInfoVeiculoImagesMobile/vehicle_image_1649104381_d41d8cd98f00b204e9800998ecf8427e.jpeg" alt="Porsche 911">
+    </picture>
+    <p>Quer saber como isso funciona? Se liga:</p>
+    <p>Você vai utilizar a tag <strong>&lt;picture&gt; &lt;/picture&gt;</strong>, dentro dela você vai carregar as suas imagem PEQUENA, MÉDIA e GRANDE utilizando a tag <strong>&lt;source&gt;</strong>, basta digitar "source" e escolher a opção <strong>source:media:type</strong>.</p>
+    <p> media="( )" Faça a troca do min-width: para max-width: e coloque a quantidade de pixel razoável, ex: 750px;</p>
+    <p>srcset="" Adicione o endereço de sua imagem;</p>
+    <p>type="image/"</p> Adicione o tipo de arquivo da imagem após a /.
+    <p>Repita o processo acima para a sua imagem MÉDIA alterando apenas o max-width para uma quantidade de píxel acima da anterior, ex: 1050px</p>
+    <p>Após isso, adicione a sua imagem GRANDE normalmente utilizando a tag <strong>&lt;img&gt;</strong></p>
+    <p><strong>CUIDADO!</strong> Atente-se a ordem. Nesse caso, a ordem é bastante importante para que funcione tudo perfeitamente.</p>
+    <h2>Áudios</h2>
+    <p>Procura o PDF 11 do curso de HTML e CSS do Guanabara pq é algo muito específico e eu tenho quase certeza que tu não vai usar isso, mas quer uma dica? tag <strong>&lt;audio&gt;</strong><strong>&lt;/audio&gt;</strong> e dentro dela vai colocando <strong>&lt;source&gt;</strong> dos tipos de áudio, começando pelo mp3/mpeg e termina com um &lt;p&gt; dizendo que o navegador não suporta áudio.</p>
+    <h2>Vídeos</h2>
+    <img src="images/11/videos.png" alt="" width="500">
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+        @font-face {
+            font-family:'arrozdoce';
+            src: url(images/14/ReenieBeanie-Regular.ttf);
+        }
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1{
+            font-family: 'Shadows Into Light', cursive;
+            text-align:center;
+            font-size: 6em;
+        }
+        h2{
+            text-align:center;
+        }
+        li{
+            font-family: 'arrozdoce', Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+        }
+    </style>
+    <title>Fontes</title>
+</head>
+<body>
+    <h1>Fontes em CSS</h1>
+    <h2>Introdução</h2>
+    <p>Para configurar a família tipográfica que será aplicada a um determinado texto, usamos a propriedade font-family das CSS. Se indicarmos mais de uma família na sequência, estamos indicando ao navegador que dê preferência para a primeira.</p>
+    <h2>Prática</h2>
+    <h3>Escolher tipo de fonte</h3>
+    <p>No seletor da tag que você deseja alterar, adicione: <strong>font-family: ; e escolha as fontes que você deseja. Exemplo: font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;</strong></p>
+    <h3>Tamanho de fontes</h3>
+    <p>A W3C recomenda o uso do <strong>px</strong> ou <strong>em</strong>. A medida 'px' é referente a pixel e a medida 'em' é referente ao tamanho padrão de uma fonte.</p>
+    <p><strong>16px=1em</strong> GERALMENTE.</p>
+    <h3>Outros estilos</h3>
+    <p>Existem outras formatações muito usadas em CSS, que são as propriedades font-style: ; para aplicar o itálico e font-weight: ; para aplicar o negrito.</p>
+    <h3>Shorthand: font: ;</h3>
+    <p>Shorthand é um "atalho" que existe em CSS para facilitar a configuração de determinadas coisas, por exemplo, é possível reduzir o font-family, font-size, font-style, font-weight em uma só propriedade:</p>
+    <p><strong>font: ;</strong></p>
+    <p>A ordem dos atributos de uma shorthand em CSS é MUITO importante. No caso da propriedade font, a ordem a ser seguida é:</p>
+        <ul>
+            <li>font-style</li>
+            <li>font-variant</li>
+            <li>font-weight</li>
+            <li>font-size/line-height</li>
+            <li>font-family</li>
+        </ul>
+    <p>Exemplo: <br>
+    font: italic bold 1em Arial, Helvetica, sans-serif;</p>
+    <h3>Alinhamentos</h3>
+    <p>Para mudar o alinhamento de um título, parágrafo ou qualquer outra coisa, é possível fazer isso em CSS.</p>
+    <p>Basta utilizar a propriedade <strong>text-align: ;</strong></p>
+    <h3>Como utilizar fonte do Google Fonts</h3>
+    <p>Na página da fonte, no canto superior direito há 3 quadrados com um simbolo '+' (View selected families), clique nele e copie as linhas de código que estão entre a tag style para adicionar dentro da tag style (na primeira linha após a tag) da página ou dentro do arquivo .CSS. Após isso, volte no site do Google Fonts, e copie a linha de código que entrega o font-family:...; e copie dentro do seu style body, h1, h2, p...</p>
+    <h3>Como utilizar fonte externa</h3>
+    <p>Dentro das primeiras linhas da tag style, você vai digitar <strong>@font-face</strong> e escolher a opção que aparece a palavra 'Emmet'.</p>
+    <p>Em font-family: você dará o nome que você quiser dentro de duas aspas simples, ex: 'nome qualquer'</p>
+    <p>Já em url, você vai indicar onde sua(s) fonte(s) está(ão) no servidor ou seja, você pode adicionar uma virgula url() e adicionar outro formato da mesma fonte. Também, vai adicionar após cada url() o format() da fonte. Tipos de format:</p>
+    <ul>
+        <li>opentype (.otf)</li>
+        <li>truetype (.ttf)</li>
+        <li>embedded-opentype</li>
+        <li>truetype-aat(Apple Advanced Typography)</li>
+        <li>svg</li>
+    </ul>
+    <p>Feito os passos acima, basta quando for adicionar o atributo font-family em algum body, h1, h2... dentro da tag style, colocar o nome da fonte também dentro de aspas simples, por exemplo:<br>
+    <strong>font-family: 'nomequalquer', Arial, Helvetica, sans-serif;</strong></p>
+</body>
+</html>
